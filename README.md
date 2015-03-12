@@ -1,1 +1,1 @@
-# collegesforhillary.github.io
+# collegesforhillary
