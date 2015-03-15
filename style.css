@@ -96,6 +96,8 @@ footer {
   height: 40px;
   margin-right:32px;
   vertical-align: top;
+  font-size:22px;
+  color: #002157;
 }
 
 #subscr_bttn {
@@ -163,4 +165,46 @@ footer {
 #photo_desc_wrap {
   height:100%;
   width:100%;
+}
+
+.footer_item {
+  color:white;
+}
+
+a:link{color:white; text-decoration:none;}
+a:visited{color:white; text-decoration:none;}
+a:hover{color:#d02027 ; text-decoration:none;}
+a:active{color:white; text-decoration:none;}
+#ss-submit {
+  background-color: #002157;
+  border: none;
+  height: 40px;
+  font-size:16px;
+  color: white;
+  font-family: 'Roboto',sans-serif;
+  padding-left:16px;
+  padding-right:16px;
+  vertical-align: top;
+}
+
+#entry_1310577411 {
+  border-color: #002157;
+  width: 320px;
+  height: 40px;
+  margin:3px;
+  margin-right:32px;
+  vertical-align: top;
+  font-size:22px;
+  color: #002157;
+  float:left;
+}
+
+#ss-form {
+  width:444px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#hidden_iframe {
+  display:none;
 }

@@ -7,13 +7,13 @@
   <body>
     <header>
       <div class='wrapper'>
-        <img id='logo' src='./images/collegesforhillary_white.png'/>
+        <a href="./index.html"><img id='logo' src='./images/collegesforhillary_white.png'/></a>
         <div id='nav' class='wrapper'>
-          <span class='nav_item title'>ABOUT</span>
+          <span class='nav_item title'><a href="./about.html">ABOUT</a></span>
           <img src='./images/dot.png' class='dot'>
-          <span class='nav_item title'>NEWS & UPDATES</span>
+          <span class='nav_item title'><a href="./news.html">NEWS & UPDATES</a></span>
           <img src='./images/dot.png' class='dot'>
-          <span class='nav_item title'>CONTACT</span>
+          <span class='nav_item title'><a href="./contact.html">CONTACT</a></span>
         </div>
       </div>
     </header>
@@ -53,8 +53,25 @@
           </div>
         </div>
         <div id='subscribe' class='wrapper'>
-          <input type='text' id='email'/>
-          <button id='subscr_bttn'>SUBSCRIBE</button>
+          <iframe id='hidden_iframe'></iframe>
+          <form action="https://docs.google.com/forms/d/1iyftz1WJk5GZbZU7k3yzbPhgEKzQ6TlBuB069w99MS8/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="document.getElementById('subscribe').innerHTML='Thank you for signing up for our mailing list!';"><ol role="list" class="ss-question-list" style="padding-left: 0">
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1310577411">
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="text" name="entry.1310577411" value="" class="ss-q-short" id="entry_1310577411" dir="auto" aria-label="Email  " title="">
+<div class="error-message" id="1742000345_errorMessage"></div>
+</div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;1271859016527974172&quot;]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+
+<input type="hidden" name="fbzx" value="1271859016527974172">
+
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action "></td>
+</tr></tbody></table></div></ol></form>
         </div>
       </div>  
     </div>
@@ -67,10 +84,10 @@
         </div>
         <img id='foot_logo' src='./images/collegesforhillarylogo_white.png'/>
         <div id='footer_right'>
-          <div id='footer_item'>home</div>
-          <div id='footer_item'>news & updates</div>
-          <div id='footer_item'>contact us</div>
-          <div id='footer_item'>about</div>
+          <div class='footer_item'><a href="./index.html">home</a></div>
+          <div class='footer_item'><a href="./news.html">news & updates</a></div>
+          <div class='footer_item'><a href="./contact.html">contact us</a></div>
+          <div class='footer_item'><a href="./about.html">about</a></div>
         </div>
       </div>
     </footer>
