@@ -15,16 +15,15 @@ window.onload = function () {
     for (var i=0; i<data.response.total_posts; i++) {
       var post = data.response.posts[i];
       
-      var date = post.date;
+      var date = post.date.split(" ")[0];
       var title = post.title.toUpperCase();;
       var url = post.short_url;
       var body = post.body;
       
-      var title = "<div class='posthd heading title'><a href='"+url+"'>"+title+"</a></div>";
-      var date = "<div class='postdt title'>"+date+"</div>";
+      var title = "<div class='posthd heading title'><a href='"+url+"'>"+title+"</a><span class='postdt title'>["+date+"]</span></div>";
       var body = "<div class='postbd'>"+body+"</div>";
       
-      $('#news').append("<div class='post'>"+title+date+body+"</div>");
+      $('#news').append("<div class='post'>"+title+body+"</div>");
     }
   });
 }
@@ -32,17 +31,24 @@ window.onload = function () {
 $(window).scroll(function() {
   if ($(document).scrollTop() > 160) {
     $('header').addClass('shrink');
-    $('#logo').attr("src","./images/collegesforhillarylogo_white.png");
-    $('#logo').attr('width','64px');
-    $('#nav').css('padding-top','26px');
-    $('#nav').css('padding-top','26px');
+    $('#logo').attr("src","./images/h.png");
+    $('#logo').attr('width','60px');
+    $('#logo').css('margin-top', '6px');
+    $('#logo').css('margin-bottom', '6px');
+    $('#nav').css('padding-top','18px');
+    $('#nav').css('padding-bottom','18px');
+    $('.nav_item').css('font-size','16px');
+    $('.dot').css('width','6px');
   } else {
     $('header').removeClass('shrink');
     $('#logo').attr("src","./images/collegesforhillary_white.png");
     $('#logo').attr('width','300px');
     $('#logo').removeClass('smallLogo');
-    
+    $('#logo').css('margin-top', '9px');
+    $('#logo').css('margin-bottom', '9px');
     $('#nav').css('padding-top','68px');
     $('#nav').css('padding-top','68px');
+    $('.nav_item').css('font-size','24px');
+    $('.dot').css('width','10px');
   }
 });
