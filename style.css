@@ -171,10 +171,26 @@ footer {
   color:white;
 }
 
-a:link{color:white; text-decoration:none;}
-a:visited{color:white; text-decoration:none;}
+a:link{color:#002157; text-decoration:none;}
+a:visited{color:#002157; text-decoration:none;}
 a:hover{color:#d02027 ; text-decoration:none;}
-a:active{color:white; text-decoration:none;}
+a:active{color:#002157; text-decoration:none;}
+
+header a:link{color:white; text-decoration:none;}
+header a:visited{color:white; text-decoration:none;}
+header a:hover{color:#d02027 ; text-decoration:none;}
+header a:active{color:white; text-decoration:none;}
+
+.heading a:link{color:white; text-decoration:none;}
+.heading a:visited{color:white; text-decoration:none;}
+.heading a:hover{color:#002157; text-decoration:none;}
+.heading a:active{color:white; text-decoration:none;}
+
+footer a:link{color:white; text-decoration:none;}
+footer a:visited{color:white; text-decoration:none;}
+footer a:hover{color:#d02027 ; text-decoration:none;}
+footer a:active{color:white; text-decoration:none;}
+
 #ss-submit {
   background-color: #002157;
   border: none;
@@ -187,9 +203,9 @@ a:active{color:white; text-decoration:none;}
   vertical-align: top;
 }
 
-#entry_1310577411 {
+.ss-q-short {
   border-color: #002157;
-  width: 320px;
+  width: 100%;
   height: 40px;
   margin:3px;
   margin-right:32px;
@@ -197,6 +213,17 @@ a:active{color:white; text-decoration:none;}
   font-size:22px;
   color: #002157;
   float:left;
+}
+
+.ss-q-long {
+  border-color: #002157;
+  border-width: 2px;
+  width: 100%;
+  margin:3px;
+  margin-right:32px;
+  vertical-align: top;
+  font-size:22px;
+  color: #002157;
 }
 
 #ss-form {
@@ -253,4 +280,10 @@ a:active{color:white; text-decoration:none;}
   color:black;
   margin-left: 24px;
   margin-right: 24px;
+}
+
+#contactsuccess {
+  text-align:center;
+  margin-top:24px;
+  font-size:28px;
 }

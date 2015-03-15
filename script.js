@@ -20,7 +20,7 @@ window.onload = function () {
       var url = post.short_url;
       var body = post.body;
       
-      var title = "<a href='"+url+"'><div class='posthd heading title'>"+title+"</div></a>";
+      var title = "<div class='posthd heading title'><a href='"+url+"'>"+title+"</a></div>";
       var date = "<div class='postdt title'>"+date+"</div>";
       var body = "<div class='postbd'>"+body+"</div>";
       
