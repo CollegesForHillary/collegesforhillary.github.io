@@ -13,10 +13,13 @@ body {
 header {
   background-color:#002157;
   height:160px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top:0;
 }
 
 #logo {
-  width:300px;
   float: left;
   margin-top: 9px;
   margin-bottom: 9px;
@@ -33,6 +36,7 @@ header {
   color: white;
   padding-top:68px;
   padding-bottom: 68px;
+  text-align: right;
 }
 
 .nav_item {
@@ -43,6 +47,10 @@ header {
 #photo {
   position:relative;
   width:100%;
+}
+
+.main {
+  margin-top: 160px;
 }
 
 #home_content {
@@ -292,3 +300,33 @@ footer a:active{color:white; text-decoration:none;}
   font-size:28px;
 }
 
+
+#entry_737115684 {
+  font-size: 16px;
+  height:32px;
+  padding:6px;
+}
+
+#entry_514773230 {
+    font-size: 16px;
+  height:32px;
+  padding:6px;
+}
+
+#entry_771112484 {
+  font-size: 16px;
+  padding:6px;
+}
+
+#hidden_iframe1 {
+  display: none;
+}
+
+.shrink {
+  height:80px;
+  padding:0px;
+}
+
+.smallLogo {
+  width:64px;
+}

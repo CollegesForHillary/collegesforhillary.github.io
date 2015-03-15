@@ -28,3 +28,21 @@ window.onload = function () {
     }
   });
 }
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 160) {
+    $('header').addClass('shrink');
+    $('#logo').attr("src","./images/collegesforhillarylogo_white.png");
+    $('#logo').attr('width','64px');
+    $('#nav').css('padding-top','26px');
+    $('#nav').css('padding-top','26px');
+  } else {
+    $('header').removeClass('shrink');
+    $('#logo').attr("src","./images/collegesforhillary_white.png");
+    $('#logo').attr('width','300px');
+    $('#logo').removeClass('smallLogo');
+    
+    $('#nav').css('padding-top','68px');
+    $('#nav').css('padding-top','68px');
+  }
+});
