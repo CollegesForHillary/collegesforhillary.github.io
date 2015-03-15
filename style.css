@@ -228,3 +228,29 @@ a:active{color:white; text-decoration:none;}
   padding-bottom:32px;
   background-color:white;
 }
+
+#news {
+  background-color:white;
+  padding-top:18px;
+  padding-bottom:36px;
+}
+
+.post {
+  margin-top:18px;
+  margin-bottom:36px;
+}
+
+.posthd {
+  background-image:url('./images/who.png');
+}
+
+.postdt {
+  margin-left: 48px;
+  font-size:12px;
+}
+
+.postbd {
+  color:black;
+  margin-left: 24px;
+  margin-right: 24px;
+}
