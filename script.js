@@ -31,7 +31,7 @@ window.onload = function () {
 $(window).scroll(function() {
   if ($(document).scrollTop() > 160) {
     $('header').addClass('shrink');
-    $('#logo').attr("src","./images/h.png");
+    $('#logo').attr("src","./images/H.png");
     $('#logo').attr('width','60px');
     $('#logo').css('margin-top', '6px');
     $('#logo').css('margin-bottom', '6px');
