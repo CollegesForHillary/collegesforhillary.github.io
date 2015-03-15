@@ -208,3 +208,23 @@ a:active{color:white; text-decoration:none;}
 #hidden_iframe {
   display:none;
 }
+
+#abouthd {
+  background-image:url('./images/who.png');
+}
+
+#about {
+  padding-top:32px;
+  padding-bottom:32px;
+  background-color:white;
+}
+
+#contacthd {
+  background-image:url('./images/who.png');
+}
+
+#contact {
+  padding-top:32px;
+  padding-bottom:32px;
+  background-color:white;
+}
