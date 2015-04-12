@@ -66,7 +66,7 @@
                 var post = data.response.posts[0];
                 var body = post.body;
                 var text = body.split("<p>");
-                text = "<p>"+text[0];
+                text = "<p>"+text[1]+"<p><a href='./news.html'>Read More</a></p>";
                 $('#home_latest').append(text);
                 }
               });
