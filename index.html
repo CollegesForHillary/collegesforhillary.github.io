@@ -1,27 +1,130 @@
-<!doctype html>     
-<!-- 
-FILE NAME: placeholder.html
-WRITTEN BY: Laurelle Cheng
-DATE: 11 March 2015
-PURPOSE: Colleges For Hillary Placeholder
-
-coming soon with more news and updates on our current events
--->
 <html>
-   <head>
-      <style>
-         body {
-               font-family: Arial, serif
-               color: #000000
-      </style>
-   </head>
-   <body align="center">
-         <p>
-            <img src="images/hillaryposterfinal.jpg" alt="Wellesley For Hillary" 
-                 height=550>
-         </p>
-         <p>
-            Coming soon with more news and updates on our current events!
-         </p>
-   </body>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <title>Colleges For Hillary</title>
+    <link href='style.css' type='text/css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <script src='script.js'></script>
+    <link rel="icon" href="./images/favicon.png">
+  </head>
+  <body>
+    <header>
+      <div class='wrapper'>
+        <a href="./index.html"><img id='logo' src='./images/collegesforhillary_white.png' width='300px'/></a>
+        <div id='nav' class='wrapper'>
+          <span class='nav_item title'><a href="./about.html">ABOUT</a></span>
+          <img src='./images/dot.png' class='dot'>
+          <span class='nav_item title'><a href="./news.html">NEWS & UPDATES</a></span>
+          <img src='./images/dot.png' class='dot'>
+          <span class='nav_item title'><a href="./contact.html">CONTACT</a></span>
+        </div>
+      </div>
+    </header>
+    <div id='home' class='main'>
+      <div id='photo'>
+        <img id='home_banner' src='./images/hillarybanner.jpg'/>
+        <div id='photo_desc_overlay' class='wrapper'>
+          <div id='photo_desc'>
+            University students start Colleges For Hillary campaign. (3/18/15)
+          </div>
+        </div>
+      </div>
+      <div id='home_content' class='wrapper'>
+        <div id='who'  class='section'>
+          <div id='whohd' class='heading title'>
+            WHO ARE WE? 
+          </div>
+          <div class='desc'>
+            <p>Colleges For Hillary is a grassroots political organization founded by Laurelle Cheng (Wellesley ’15), Queenie Cheng Clemente (Obama ’08) and Paul Clemente (Senator Daniel Patrick Moynihan ’91-’92) - individuals who are passionate about getting Hillary Clinton elected as the first female President of the United States. Our focus is highly targeted at garnering support from the college student demographic. </p>
+
+            <p>In this day and age, popular media, the 24 hour news cycle and the opposing party look to dehumanize candidates, make snap judgments without giving candidates a fair shake. It is easy to create caricatures, to present all the foibles and failures without a counter narrative. Colleges For Hillary strives to dispel and debunk these myths, to separate fact from fiction about Hillary via both the film medium and in-person discussions with people who know her well; to help people understand Hillary not only as real person, your friend, your next-door neighbor, a wife, a mom - but also the guiding force who will lead this country into 2016 and beyond. Who is Hillary? What kind of person is she? Is she portrayed accurately in the media? These and many more questions are those that will be answered in this first of its kind forum at Wellesley College, Hillary Rodham Clinton’s alma mater. </p>
+
+            <p>In this endeavor we hope to offer young voters a new and unvarnished perspective on Hillary – not just as a highly accomplished political figure, an international statesperson, but also as a force for change. That Hillary is not a superhuman but a human being that above all else is looking to improve the lives of millions across the globe. </p>
+          </div>
+        </div>
+        <div id='latest' class='section'>
+          <div id='latehd' class='heading title'>
+            LATEST FROM COLLEGES FOR HILLARY
+          </div>
+          <div class='desc' id="home_latest">
+            <script>
+              var tumblrAPI = "http://api.tumblr.com/v2/blog/collegesforhillary.tumblr.com/posts/text";
+
+              $.ajax({
+                type: "GET",
+                url: tumblrAPI,
+                dataType: "jsonp",
+                data: {
+                    api_key: "c6Wzo0YtgripBg8iVpaA414jDcouZbWsLBWFN3Lwh4sdXobESn"
+                }
+              }).done(function( data ) {
+                
+                if (data.response.total_posts == 0) {
+                  $('#news').append("<div id='nonews'>Keep checking in for news on Colleges for Hillary</div>");
+                } else {
+                var post = data.response.posts[0];
+                var body = post.body;
+                var text = body.split("<p>");
+                text = "<p>"+text[1]+"<p><a href='./news.html'>Read More</a></p>";
+                $('#home_latest').append(text);
+                }
+              });
+              </script>
+
+          </div>
+        </div>
+        <div id='involved' class='section'>
+          <div id='invhd' class='heading title'>
+            GETTING INVOLVED
+          </div>
+          <div class='desc'>
+            <p>Over the coming months, Colleges For Hillary representatives across the United States will be hosting screenings of select films at their respective campuses. If you are interested in bringing this campaign to your campus, do not hesitate to reach out to CollegesForHillary@gmail.com. </p>
+
+            <p>Colleges For Hillary also supports independent filmmakers and is currently accepting new proposals for this campaign.</p>
+
+            <p>Stay connected for news, events and updates at <a href="www.CollegesforHillary.com">www.CollegesForHillary.com</a>, <a href="www.facebook.com/CollegesForHillary">www.facebook.com/CollegesForHillary</a> and <a href="www.twitter.com/CollegesForHRC">www.twitter.com/CollegesForHRC</a>.</p>
+          </div>
+        </div>
+        <div id='subscribe' class='wrapper'>
+          <iframe id='hidden_iframe1' name='hidden_iframe1'></iframe>
+          <form action="https://docs.google.com/forms/d/1iyftz1WJk5GZbZU7k3yzbPhgEKzQ6TlBuB069w99MS8/formResponse" method="POST" id="ss-form" target="hidden_iframe1" onsubmit="$('#subscribe').html('Thank you for signing up for our mailing list!');"><ol role="list" class="ss-question-list" style="padding-left: 0">
+            
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1310577411">
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="text" name="entry.1310577411" value="" class="ss-q-short" id="entry_1310577411" dir="auto" aria-label="Email  " title="">
+<div class="error-message" id="1742000345_errorMessage"></div>
+</div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;1271859016527974172&quot;]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+
+<input type="hidden" name="fbzx" value="1271859016527974172">
+
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<input type="submit" name="submit" value="Subscribe" id="ss-submit" class="jfk-button jfk-button-action "></td>
+</tr></tbody></table></div></ol></form>
+        </div>
+      </div>  
+    </div>
+    <footer class='title'>
+      <div class='wrapper'>
+        <div id='footer_left'>
+          <div id='disclaimer'>
+            Colleges For Hillary is not affiliated with Hillary For America.
+          </div>
+        </div>
+        <img id='foot_logo' src='./images/collegesforhillarylogo_white.png'/>
+        <div id='footer_right'>
+          <div class='footer_item'><a href="./index.html">home</a></div>
+          <div class='footer_item'><a href="./news.html">news & updates</a></div>
+          <div class='footer_item'><a href="./contact.html">contact us</a></div>
+          <div class='footer_item'><a href="./about.html">about</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
