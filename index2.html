@@ -47,8 +47,30 @@
           <div id='latehd' class='heading title'>
             LATEST FROM COLLEGES FOR HILLARY
           </div>
-          <div class='desc'>
-            Nunc lectus nunc, sodales quis sollicitudin sit amet, pulvinar eu augue. Quisque elit orci, malesuada sed ultrices id, pulvinar nec lectus. Donec facilisis diam id lacus tincidunt scelerisque. Fusce vulputate metus enim, rhoncus aliquet turpis placerat dictum. Nam convallis purus quis elementum finibus. Pellentesque nec ligula odio. Phasellus in sapien nibh. In in ex et sem iaculis eleifend id at metus. Vestibulum risus elit, congue eu tristique sit amet, auctor a lectus. Mauris at tristique ipsum. Etiam tellus libero, suscipit ut placerat in, ultrices ut magna. Donec et risus auctor, facilisis orci sit amet, pulvinar mi. Pellentesque dictum auctor auctor. Donec et lorem feugiat, egestas nibh eget, venenatis risus.
+          <div class='desc' id="home_latest">
+            <script>
+              var tumblrAPI = "http://api.tumblr.com/v2/blog/collegesforhillary.tumblr.com/posts/text";
+
+              $.ajax({
+                type: "GET",
+                url: tumblrAPI,
+                dataType: "jsonp",
+                data: {
+                    api_key: "c6Wzo0YtgripBg8iVpaA414jDcouZbWsLBWFN3Lwh4sdXobESn"
+                }
+              }).done(function( data ) {
+                
+                if (data.response.total_posts == 0) {
+                  $('#news').append("<div id='nonews'>Keep checking in for news on Colleges for Hillary</div>");
+                } else {
+                var post = data.response.posts[0];
+                var body = post.body;
+                var text = body.split("<p>");
+                text = "<p>"+text[0];
+                $('#home_latest').append(text);
+                }
+              });
+              </script>
 
           </div>
         </div>
