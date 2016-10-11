@@ -47,6 +47,7 @@ header {
 #photo {
   position:relative;
   width:100%;
+  height:520px;
 }
 
 .main {
@@ -81,8 +82,12 @@ footer {
 }
 
 #home_banner {
-  
-    width:100%;
+  width:100%;
+  height:520px;
+  background-image: url("./images/hillarybanner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
 }
 
 #disclaimer {
@@ -91,7 +96,7 @@ footer {
   margin-top:30px;
 }
 #footer_right {
-  padding-top:10px;
+  padding-top:5px;
 }
 
 #subscribe {
@@ -178,6 +183,11 @@ footer {
 
 .footer_item {
   color:white;
+}
+
+.footer_item2 {
+  margin-right: 8px;
+  margin-left:4px;
 }
 
 a:link{color:#002157; text-decoration:none;}
