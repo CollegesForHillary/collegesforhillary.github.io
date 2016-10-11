@@ -19,7 +19,7 @@ window.onload = function () {
       var title="";
       var body="";
 
-      // if (post.tags.includes("news")){
+      if (post.tags.includes("news")){
         nopost = false
         if (post.type == "text") {
           var posttitle = post.title
@@ -37,7 +37,7 @@ window.onload = function () {
           }
           body += "</div>";
         }
-      // }
+      }
       
       $('#news').append("<div class='post'>"+title+body+"</div>");
     }
